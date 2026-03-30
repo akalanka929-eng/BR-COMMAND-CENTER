@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR-Registrar</title>
+    
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/akalanka929-eng/BR-EXPLORER/main/App%2040.ico" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/akalanka929-eng/BR-EXPLORER/main/App%2040.ico" type="image/x-icon">
+    
+    <style>
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%;
+            background-color: #121212; /* Dark Mode Background */
+            overflow: hidden; 
+            font-family: Arial, sans-serif;
+        }
+
+        /* Splash Screen (පින්තූරය පෙන්වන කොටස) */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #121212;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #splash-screen img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            filter: drop-shadow(0px 0px 20px rgba(255,255,255,0.1));
+        }
+
+        /* Web App එක පෙන්වන කොටස */
+        #app-container {
+            width: 100%;
+            height: 100vh;
+            display: none; 
+        }
+
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="splash-screen">
+        <img src="https://raw.githubusercontent.com/akalanka929-eng/pay-summary-repo/main/New%20Seekars%20Logic.png" alt="Loading Logo">
+    </div>
+
+    <div id="app-container">
+        <iframe src="https://script.google.com/macros/s/AKfycbxx-O0NYgArilC4Y5d07Rgx1XI1P8BeuIeob9gR5juE5iQhMpiCFcxBdvbjzOadmjg/exec"></iframe>
+    </div>
+
+    <script>
+        // තත්පර 3කට පසු ක්‍රියාත්මක වේ
+        setTimeout(function() {
+            var splash = document.getElementById('splash-screen');
+            var app = document.getElementById('app-container');
+
+            // Fade out animation
+            splash.style.opacity = '0';
+
+            // Animation එකෙන් පසු Splash Screen ඉවත් කර App එක පෙන්වීම
+            setTimeout(function() {
+                splash.style.display = 'none';
+                app.style.display = 'block';
+            }, 500); 
+
+        }, 3000); 
+    </script>
+
+</body>
+</html>
