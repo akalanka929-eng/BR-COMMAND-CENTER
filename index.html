@@ -36,25 +36,24 @@
 
         /* විශාල කරන ලද වෘත්තාකාර රාමුව */
         .circle-frame {
-            width: 400px;      /* විශාල කරන ලද පළල */
-            height: 400px;     /* විශාල කරන ලද උස */
+            width: 350px;      /* පෙර 280 -> 350 දක්වා විශාල කර ඇත */
+            height: 350px;     /* සමාන උසක් */
             border-radius: 50%; /* සම්පූර්ණ වෘත්තයක් */
             overflow: hidden;   /* රාමුවෙන් පිටත කොටස් සඟවයි */
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #1e1e2f; /* රාමුවේ පසුබිම */
-            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.25); /* විශාල රාමුවට ගැලපෙන දීප්තිය */
-            border: 3px solid rgba(255, 255, 255, 0.2); /* තරමක් දීප්තිමත් මායිමක් */
+            box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.25); /* දීප්තිය තරමක් වැඩි කර ඇත */
+            border: 4px solid rgba(255, 255, 255, 0.2); /* මායිම තරමක් ඝන කර ඇත */
         }
 
-        /* රූපය වෘත්තයට සරිලන ලෙස සකසන්න (විශාල වනු ඇත) */
+        /* රූපය වෘත්තයට සරිලන ලෙස සකසන්න */
         .circle-frame img {
             width: 100%;
             height: 100%;
-            object-fit: contain;  /* GIF එක සම්පූර්ණයෙන්ම පෙන්වන අතර රාමුව තුළ තබා ගනී */
+            object-fit: cover;  /* GIF එක රාමුව පුරා වටවීමට */
             display: block;
-            background-color: #121212; /* GIF එක වටා අඳුරු පසුබිමක් */
         }
 
         /* Web App එක පෙන්වන කොටස */
